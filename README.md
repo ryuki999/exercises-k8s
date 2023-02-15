@@ -16,13 +16,14 @@
 ```
 # 演習リポジトリのクローン
 git clone https://github.com/ryuki999/exercises-k8s.git
+cd exercises-k8s
 
 minikube start
 kubectl apply -f replicaset.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 
-# minikubeのコンテナに対してトンネルを通して接続(NordPortを使用しても必要)
+# minikubeのコンテナに対してURLを発行(NordPortを使用しても必要)
 minikube service myapp --url
 ```
 
